@@ -1,0 +1,202 @@
+\documentclass{unimapcgsfyp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is unimapthesis.tex, January 2019.
+% Created by Mohd Hanafi Mat Som (DE)
+% mhanafi@unimap.edu.my
+% http://mohdhanafi.unimap.edu.my/template
+%
+% This is the "main" file for the thesis,
+% formatted according to the Template
+% Thesis, published by CGS UniMAP 2018.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Declare graphics path 
+\graphicspath{{./Figures/}}	% a subfolder named figs
+
+%% To SPEED UP compilation, enable this option.
+%% This package will replace your figure with textbox but maintain the figure size
+%
+%\usepackage[allfiguresdraft]{draftfigure}
+
+%% you can opt to show specific chapter for FASTER compilation of the document. 
+%% Useful during drafting the thesis.
+%% http://web.science.mq.edu.au/~rdale/resources/writingnotes/latexstruct.html
+%
+%\includeonly{chap-review,chap-design}
+
+%% The enumitem package is great for customising
+%% list environments.
+\usepackage{enumitem}
+
+%% Listings is a nice package for typesetting code
+%% listings. Other possible packages include fancyvrb,
+%% minted, etc.
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,breaklines=true}
+
+%% Indent first paragraph after section header
+\usepackage{indentfirst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO Particulars about your thesis HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Your Name
+\author{Budin Bin Buyung}
+% Your Matric Number
+\matric{161150042}
+% Your IC/Passport Number
+\icpass{201020-89-0089}
+% Your Date of Birth
+\dob{20 October 2000}
+% Your Enrolled School
+\schoolname{School of Mechatronic Engineering}
+% Your Enrolled Program
+%\programname{Biomedical Electronic Engineering}
+%% Your Supervisor name
+%\supervisor{Dr. Mohd Hanafi Mat Som}
+%% Panel 1
+%\panelone{Dr. Charles Xavier}
+%% Panel 2
+%\paneltwo{Dr. Muhammad Juhairi Aziz Safar}
+%\paneltwo{Dr. Putri Intan Payung Indah Zulaikha Odelia Ladasyia Absyari}
+% English title of your thesis
+\title{Writing Your Thesis with LaTeX and It's A Very Long Title That It Span to Three Lines Where the Longer the Title Makes Your Thesis Looks Awesome}
+% Malay title of your thesis
+\titlems{Menulis Thesis Anda dengan LaTeX dan Ia Merupakan Satu Tajuk yang Sangat Panjang Merangkumi Tiga Baris Dimana Semakin Panjang Tajuk Thesis Menjadikan Thesis Lebih Mengagumkan}
+% Academic Session
+\acads{2019/2020}
+% Year submitted
+\submityear{2020}
+% Declaration date signed
+\declaredate{10 January 2020}
+%% Degree name :-)
+\degreetype{Bachelor of Engineering (Biomedical Electronic Engineering)} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO List of Publication Header
+%  You can comment out the following line if you don't have a
+% "List of Own Publications"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcites{own}{LIST OF PUBLICATIONS}
+%\addbibresource{mybib.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Options for generating hyperlinks when using pdfLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifpdf
+  \makeatletter
+  \usepackage[pdftex,plainpages=false,hypertexnames=false,bookmarksnumbered,pdfpagelabels,%
+    pdfauthor={\@author},pdftitle={\@title}]{hyperref}
+  \makeatother
+\else
+  \usepackage[dvips,plainpages=false,bookmarksnumbered,breaklinks=true]{hyperref}
+\fi
+
+\usepackage{ragged2e}
+%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Default bibliography style is apa (using 
+% \RequirePackage[natbibapa]{apacite} in the class file).
+%
+% If you prefer the number system though, use bibliography
+% style "plainnat" for [1][2][3] or "alpha" for [Jon94] (the label
+% will be auto-generated).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{apacite}
+%\bibliographystyleown{apacite}	% comment this if not using \newcites{own} above
+%\bibliographystyle{plainnat}
+%\bibliographystyleown{plainnat}
+\bibliographystyle{IEEEtranN}
+
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inserts the cover page (the hard cover with gold-lettering)
+% and the title page 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makecover
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TODO Declaration & Panel Approval
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\declaration
+\approval 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAKE SURE YOU HAVE A acknowledgements.tex FILE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{Frontmatter/acknowledgements}
+
+\begin{singlespace}
+\tableofcontents \clearpage
+\listoftables \clearpage
+\listoffigures \clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% You can comment out the following line if you don't
+% have a "List of Acronyms" and "List of Symbols"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Frontmatter/loa}
+\end{singlespace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO Abstract
+% Your Malay and English abstracts, each in one file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{abs-mal}
+\input{abs-eng}
+
+% Paragraph spacing
+\setlength\parskip{18pt}
+% Text-float spacing
+\setlength\intextsep{18pt}
+
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The actual chapters of your thesis as listed in 
+% mainchaps.tex. Make sure you have the relevant
+% chapter files. 
+% E.g. if you mainchaps.tex contains the lines
+%
+%  \include{hypothesis.tex}
+%  \include{proof.tex}
+%
+% Then you MUST have the files hypothesis.tex, proof.tex
+% (containing the relevant chapters) in the same directory
+% as mainchaps.tex.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{mainchaps}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO Bibliography.
+% You can create mybib.bib with JabRef, the program included
+% download from
+% http://jabref.sourceforge.net/
+% \shortcite for APA style https://latex.org/forum/viewtopic.php?f=50&t=22088
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titlespacing*{\chapter}{0pt}{*-4.5}{\baselineskip}
+\bibliography{IEEEabrv,mybib}
+%\printbibliography
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO Appendices.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\input{Appendices/appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO List of publication appendix.  If you don't have one, you may
+% comment out the next 4 lines.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\nociteown{lim:2007,lim:latextypesetting}
+%\begin{singlespace}
+%\bibliographyown{mybib}
+%\end{singlespace}
+
+\end{document}

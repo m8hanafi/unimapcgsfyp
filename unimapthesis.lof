@@ -1,0 +1,39 @@
+\babel@toc {english}{}
+\vspace *{3pc}\raggedright \sloppy 
+\hfill {\bfseries PAGE}\\
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\babel@toc {bahasam}{}
+\addvspace {10\p@ }
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Common Layout and Formatting Tasks. Note how this long title wraps around I hope it works anyway. Look it needs more, so here's some more longer text. Is that enough? I hope it is.\relax }}{2}{figure.30}% 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Compact Lists\relax }}{3}{figure.47}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A BibTeX Entry\relax }}{7}{figure.70}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Including a Graphics File\relax }}{11}{figure.84}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Pythagoras' Theroem\relax }}{11}{figure.85}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Creating subfigures within figures\relax }}{13}{figure.101}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces This is the main caption of the figure.\relax }}{13}{figure.104}% 
+\contentsline {subfigure}{\numberline {3.4(a)}{\ignorespaces {First caption}}}{13}{subfigure.4.1}% 
+\contentsline {subfigure}{\numberline {3.4(b)}{\ignorespaces {Second caption}}}{13}{subfigure.4.2}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Typesetting Tables\relax }}{14}{figure.121}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Aligning decimal data in tables\relax }}{15}{figure.134}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Note the differences between this table and previous tables.\relax }}{16}{figure.148}% 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Including a sideway, full-page graphic\relax }}{17}{figure.157}% 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces A full-page, sideways figure\relax }}{18}{figure.158}% 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Typesetting Mathematical Equations\relax }}{20}{figure.182}% 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces The template \texttt {loa.tex} for acronyms\relax }}{21}{figure.194}% 
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Typesetting a Java program listing\relax }}{22}{figure.209}% 
+\contentsline {figure}{\numberline {3.13}{\ignorespaces A pretty-printed Java program listing with syntax highlighting\relax }}{23}{figure.218}% 
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Typesetting a C program listing\relax }}{23}{figure.229}% 
+\contentsline {figure}{\numberline {3.15}{\ignorespaces A pretty-printed C program listing with syntax highlighting\relax }}{23}{figure.237}% 
+\contentsline {figure}{\numberline {3.16}{\ignorespaces A C program listing without syntax highlighting\relax }}{24}{figure.245}% 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

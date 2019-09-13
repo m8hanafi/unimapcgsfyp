@@ -1,0 +1,40 @@
+\BOOKMARK [-1][-]{front.-1}{Front Matter}{}% 1
+\BOOKMARK [-1][-]{section*.1}{Declaration of Report}{}% 2
+\BOOKMARK [-1][-]{section*.2}{Panel Approval and Declaration Sheet}{}% 3
+\BOOKMARK [0][-]{chapter*.3}{Acknowledgement}{section*.2}% 4
+\BOOKMARK [0][-]{chapter*.4}{Table of Contents}{section*.2}% 5
+\BOOKMARK [0][-]{chapter*.5}{List of Tables}{section*.2}% 6
+\BOOKMARK [0][-]{chapter*.6}{List of Figures}{section*.2}% 7
+\BOOKMARK [0][-]{chapter*.7}{List of Abbreviations}{section*.2}% 8
+\BOOKMARK [0][-]{chapter*.8}{List of Symbols}{section*.2}% 9
+\BOOKMARK [0][-]{chapter*.9}{Abstrak}{section*.2}% 10
+\BOOKMARK [0][-]{chapter*.10}{Abstract}{section*.2}% 11
+\BOOKMARK [-1][-]{main.-1}{Main Chapters}{}% 12
+\BOOKMARK [0][-]{chapter.11}{1 Samples of Basic LaTeX}{main.-1}% 13
+\BOOKMARK [1][-]{section.12}{1.1 Background History}{chapter.11}% 14
+\BOOKMARK [1][-]{section.15}{1.2 Some Simple Command Usages.}{chapter.11}% 15
+\BOOKMARK [1][-]{section.51}{1.3 Special Characters}{chapter.11}% 16
+\BOOKMARK [1][-]{section.53}{1.4 Useful Resources}{chapter.11}% 17
+\BOOKMARK [1][-]{section.54}{1.5 Useful Tips}{chapter.11}% 18
+\BOOKMARK [0][-]{chapter.58}{2 Citations and Bibliography}{main.-1}% 19
+\BOOKMARK [1][-]{section.59}{2.1 The *.bib File}{chapter.58}% 20
+\BOOKMARK [1][-]{section.71}{2.2 Citations using the natbib package}{chapter.58}% 21
+\BOOKMARK [2][-]{subsection.72}{2.2.1 IEEE Citation Style}{section.71}% 22
+\BOOKMARK [2][-]{subsection.73}{2.2.2 Author-Year System}{section.71}% 23
+\BOOKMARK [3][-]{subsubsection.74}{2.2.2.1 Testing the TOC}{subsection.73}% 24
+\BOOKMARK [2][-]{subsection.75}{2.2.3 Entry Types}{section.71}% 25
+\BOOKMARK [0][-]{chapter.76}{3 Figures, Tables, Equations, Algorithms, etc}{main.-1}% 26
+\BOOKMARK [1][-]{section.77}{3.1 Inserting Figures}{chapter.76}% 27
+\BOOKMARK [1][-]{section.86}{3.2 How Do I Do Subfigures?}{chapter.76}% 28
+\BOOKMARK [1][-]{section.105}{3.3 Inserting Tables}{chapter.76}% 29
+\BOOKMARK [1][-]{section.151}{3.4 Full-paged, Sideways Figures and Tables}{chapter.76}% 30
+\BOOKMARK [1][-]{section.160}{3.5 Mathematical Equations}{chapter.76}% 31
+\BOOKMARK [1][-]{section.186}{3.6 Acronyms}{chapter.76}% 32
+\BOOKMARK [1][-]{section.196}{3.7 Program Listings}{chapter.76}% 33
+\BOOKMARK [0][-]{chapter.246}{4 Result \046 Discussion}{main.-1}% 34
+\BOOKMARK [1][-]{section.247}{4.1 Printing Your Thesis}{chapter.246}% 35
+\BOOKMARK [0][-]{chapter.248}{5 Conclusion}{main.-1}% 36
+\BOOKMARK [0][-]{chapter*.249}{REFERENCES}{main.-1}% 37
+\BOOKMARK [0][-]{appendix.250}{A Data Used}{main.-1}% 38
+\BOOKMARK [0][-]{appendix.251}{B UML Diagrams}{main.-1}% 39
+\BOOKMARK [0][-]{appendix.252}{C Dummy Appendix}{main.-1}% 40
