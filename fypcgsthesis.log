@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.6)  11 SEP 2019 18:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.6)  13 SEP 2019 09:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**unimapthesis.tex
-(./unimapthesis.tex
+**fypcgsthesis.tex
+(./fypcgsthesis.tex
 LaTeX2e <2018-12-01>
 (./unimapcgsfyp.cls
 Document Class: unimapcgsfyp 2019/09/05 version 2.2
@@ -859,10 +859,10 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \RaggedRightParindent=\skip124
 \JustifyingParindent=\skip125
 )
-(./unimapthesis.aux (./Frontmatter/acknowledgements.aux) (./chap-intro.aux)
+(./fypcgsthesis.aux (./Frontmatter/acknowledgements.aux) (./chap-intro.aux)
 (./chap-review.aux) (./chap-methodology.aux) (./chap-result.aux)
 (./chap-conclusion.aux) (./Appendices/app-data.aux) (./Appendices/app-uml.aux))
-\openout1 = `unimapthesis.aux'.
+\openout1 = `fypcgsthesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
@@ -985,9 +985,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 98.
 LaTeX Info: Redefining \pageref on input line 98.
 LaTeX Info: Redefining \nameref on input line 98.
- (./unimapthesis.out) (./unimapthesis.out)
+ (./fypcgsthesis.out) (./fypcgsthesis.out)
 \@outlinefile=\write3
-\openout3 = `unimapthesis.out'.
+\openout3 = `fypcgsthesis.out'.
 
 
 ABD: EverySelectfont initializing macros
@@ -1047,7 +1047,7 @@ File: Frontmatter/Declaration-Report.pdf Graphic file (type pdf)
 Package pdftex.def Info: Frontmatter/Declaration-Report.pdf , page1 used on inp
 ut line 125.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [2
+ [1
 
  <./Frontmatter/Declaration-Report.pdf>]
 <Frontmatter/Panel-Approval.pdf, id=231, 597.23125pt x 845.1575pt>
@@ -1087,7 +1087,7 @@ File: Frontmatter/Panel-Approval.pdf Graphic file (type pdf)
 Package pdftex.def Info: Frontmatter/Panel-Approval.pdf , page1 used on input l
 ine 126.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [3 <./Frontmatter/Panel-Approval.pdf>]
+ [2 <./Frontmatter/Panel-Approval.pdf>]
 \openout2 = `Frontmatter/acknowledgements.aux'.
 
 
@@ -1131,7 +1131,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 7.
 
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [4
+)) [3
 
 
 ]
@@ -1139,26 +1139,26 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 134.
 
-(./unimapthesis.toc
+(./fypcgsthesis.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
- [5
+ [4
 
 
 ])
 \tf@toc=\write4
-\openout4 = `unimapthesis.toc'.
+\openout4 = `fypcgsthesis.toc'.
 
- [6]
+ [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 135.
 
-(./unimapthesis.lot)
+(./fypcgsthesis.lot)
 \tf@lot=\write5
-\openout5 = `unimapthesis.lot'.
+\openout5 = `fypcgsthesis.lot'.
 
- [7
+ [6
 
 
 ]
@@ -1166,22 +1166,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 136.
 
-(./unimapthesis.lof)
+(./fypcgsthesis.lof)
 \tf@lof=\write6
-\openout6 = `unimapthesis.lof'.
+\openout6 = `fypcgsthesis.lof'.
 
- [8
-
-
-] (./Frontmatter/loa.tex [9
+ [7
 
 
-]) (./abs-mal.tex [10
+] (./Frontmatter/loa.tex [8
+
+
+]) (./abs-mal.tex [9
 
 ])
-(./abs-eng.tex [11
+(./abs-eng.tex [10
 
-]) [12
+]) [11
 
 ] (./mainchaps.tex
 \openout2 = `chap-intro.aux'.
@@ -1331,7 +1331,7 @@ Chapter 5.
 
 
 
-]) (./unimapthesis.bbl
+]) (./fypcgsthesis.bbl
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 2.
@@ -1366,23 +1366,23 @@ Appendix C.
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
- (./unimapthesis.aux (./Frontmatter/acknowledgements.aux)
+ (./fypcgsthesis.aux (./Frontmatter/acknowledgements.aux)
 (./chap-intro.aux) (./chap-review.aux) (./chap-methodology.aux)
 (./chap-result.aux) (./chap-conclusion.aux) (./Appendices/app-data.aux)
 (./Appendices/app-uml.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
-Package rerunfilecheck Info: File `unimapthesis.out' has not changed.
+Package rerunfilecheck Info: File `fypcgsthesis.out' has not changed.
 (rerunfilecheck)             Checksum: B3E9107EACD7965D6E520F3F6ABF3467;2665.
  ) 
 Here is how much of TeX's memory you used:
  16815 strings out of 494060
  244981 string characters out of 6163036
- 599370 words of memory out of 5000000
+ 598390 words of memory out of 5000000
  19769 multiletter control sequences out of 15000+600000
  87439 words of font info for 143 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 51i,18n,69p,809b,2374s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,18n,69p,809b,2376s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{subfigure.4.2} has been referenced but does not e
 xist, replaced by a fixed one
 
@@ -1407,7 +1407,7 @@ rw/symbol/usyr.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/urw/tim
 es/utmb8a.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/local/texlive/2019basic/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on unimapthesis.pdf (43 pages, 682659 bytes).
+Output written on fypcgsthesis.pdf (43 pages, 682663 bytes).
 PDF statistics:
  973 PDF objects out of 1000 (max. 8388607)
  869 compressed objects within 9 object streams

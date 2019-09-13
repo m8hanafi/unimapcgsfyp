@@ -1,18 +1,18 @@
 \babel@toc {english}{}
 \vspace *{3pc}\raggedright \sloppy 
 \hfill {\bfseries PAGE}\\
-\contentsline {part}{\bfseries \uppercase {Declaration of Report}}{ii}{section*.1}% 
-\contentsline {part}{\bfseries \uppercase {Panel Approval and Declaration Sheet}}{iii}{section*.2}% 
-\contentsline {chapter}{\bfseries \uppercase {Acknowledgement}}{iv}{chapter*.3}% 
-\contentsline {chapter}{\uppercase {\bfseries Table of Contents}}{v}{chapter*.4}% 
-\contentsline {chapter}{\uppercase {\bfseries List of Tables}}{vii}{chapter*.5}% 
-\contentsline {chapter}{\uppercase {\bfseries List of Figures}}{viii}{chapter*.6}% 
-\contentsline {chapter}{\bfseries \uppercase {List of Abbreviations}}{ix}{chapter*.7}% 
-\contentsline {chapter}{\bfseries \uppercase {List of Symbols}}{x}{chapter*.8}% 
+\contentsline {part}{\bfseries \uppercase {Declaration of Report}}{i}{section*.1}% 
+\contentsline {part}{\bfseries \uppercase {Panel Approval and Declaration Sheet}}{ii}{section*.2}% 
+\contentsline {chapter}{\bfseries \uppercase {Acknowledgement}}{iii}{chapter*.3}% 
+\contentsline {chapter}{\uppercase {\bfseries Table of Contents}}{iv}{chapter*.4}% 
+\contentsline {chapter}{\uppercase {\bfseries List of Tables}}{vi}{chapter*.5}% 
+\contentsline {chapter}{\uppercase {\bfseries List of Figures}}{vii}{chapter*.6}% 
+\contentsline {chapter}{\bfseries \uppercase {List of Abbreviations}}{viii}{chapter*.7}% 
+\contentsline {chapter}{\bfseries \uppercase {List of Symbols}}{ix}{chapter*.8}% 
 \babel@toc {bahasam}{}
-\contentsline {chapter}{\bfseries \uppercase {Abstrak}}{xi}{chapter*.9}% 
+\contentsline {chapter}{\bfseries \uppercase {Abstrak}}{x}{chapter*.9}% 
 \babel@toc {english}{}
-\contentsline {chapter}{\bfseries \uppercase {Abstract}}{xii}{chapter*.10}% 
+\contentsline {chapter}{\bfseries \uppercase {Abstract}}{xi}{chapter*.10}% 
 \renewcommand \cftchapfont {\bfseries }
 \contentsline {chapter}{\numberline {1}\uppercase {Samples of Basic \LaTeX {}}}{1}{chapter.11}% 
 \contentsline {section}{\numberline {1.1}Background History}{1}{section.12}% 
