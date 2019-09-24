@@ -1,5 +1,5 @@
 # unimapcgsfyp
-The LaTeX class for Universiti Malaysia Perlis (UniMAP) postgraduate thesis. Dedicated for FYP thesis based on CGS UniMAP guideline 2017. 
+The LaTeX class for Universiti Malaysia Perlis (UniMAP) undergraduate thesis. Dedicated for FYP thesis based on CGS UniMAP guideline 2017. 
 
 ## Description
 The unimapcgsfyp project provides and maintains a LaTeX class as well as a TeXstudio layout to typeset your thesis according to the Centre for Graduate Studies, UniMAP thesis formatting rules. It is currently the most efficient way to write a CGS UniMAP compliant thesis.
