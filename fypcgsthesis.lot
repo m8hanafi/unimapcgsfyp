@@ -9,16 +9,17 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Special Characters in \LaTeX \relax }}{4}{table.52}% 
+\contentsline {table}{\numberline {1.1}{\ignorespaces Special Characters in \LaTeX \relax }}{6}{table.92}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Sample Table Only\relax }}{14}{table.122}% 
-\contentsline {table}{\numberline {3.2}{\ignorespaces A table with decimal data\relax }}{15}{table.135}% 
-\contentsline {table}{\numberline {3.3}{\ignorespaces A table with decimal data (mis-aligned)\relax }}{15}{table.136}% 
-\contentsline {table}{\numberline {3.4}{\ignorespaces This is an example to for a table. This is straightforward version.\relax }}{15}{table.137}% 
-\contentsline {table}{\numberline {3.5}{\ignorespaces This is another example for a table. Advance version of a table.\relax }}{16}{table.149}% 
-\contentsline {table}{\numberline {3.6}{\ignorespaces This is an example to for a table\relax }}{17}{table.150}% 
-\contentsline {table}{\numberline {3.7}{\ignorespaces This is an example to for a table. This is straightforward version.\relax }}{19}{table.159}% 
+\contentsline {table}{\numberline {3.1}{\ignorespaces A table with decimal data\relax }}{18}{table.169}% 
+\contentsline {table}{\numberline {3.2}{\ignorespaces A table with decimal data (mis-aligned)\relax }}{18}{table.170}% 
+\contentsline {table}{\numberline {3.3}{\ignorespaces This is an example to for a table. This is straightforward version. The caption of this table is long that takes up to two lines.\relax }}{18}{table.171}% 
+\contentsline {table}{\numberline {3.4}{\ignorespaces This is another example for a table. Advance version of a table.\relax }}{19}{table.183}% 
+\contentsline {table}{\numberline {3.5}{\ignorespaces This is an example to for a table\relax }}{20}{table.184}% 
+\contentsline {table}{\numberline {3.6}{\ignorespaces This is an example of a long table \relax }}{21}{table.186}% 
+\contentsline {table}{\numberline {3.7}{\ignorespaces This is an example of a sidewaystable.\relax }}{24}{table.195}% 
+\contentsline {table}{\numberline {3.8}{\ignorespaces This is an example of a long table in landscape page using \texttt {pdflscape} package \relax }}{25}{table.196}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

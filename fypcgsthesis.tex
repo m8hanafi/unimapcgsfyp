@@ -1,6 +1,6 @@
 \documentclass{unimapcgsfyp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This is unimapthesis.tex, January 2019.
+% This is fypcgsthesis.tex, October 2019.
 % Created by Mohd Hanafi Mat Som (DE)
 % mhanafi@unimap.edu.my
 % http://mohdhanafi.unimap.edu.my/template
@@ -9,6 +9,9 @@
 % formatted according to the Template
 % Thesis, published by CGS UniMAP 2018.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Comment (Ctrl+T), Uncomment (Ctrl+U)
+%
 
 %% Declare graphics path 
 \graphicspath{{./Figures/}}	% a subfolder named figs
@@ -22,7 +25,7 @@
 %% Useful during drafting the thesis.
 %% http://web.science.mq.edu.au/~rdale/resources/writingnotes/latexstruct.html
 %
-%\includeonly{chap-review,chap-design}
+%\includeonly{chap-review,chap-methodology}
 
 %% The enumitem package is great for customising
 %% list environments.
@@ -37,6 +40,16 @@
 %% Indent first paragraph after section header
 \usepackage{indentfirst}
 
+%% Package if you require table that span more than one page
+\usepackage{longtable} 
+
+%% Landscape page layout
+%\usepackage{lscape}		% landscape page without changing the paper orientation
+\usepackage{pdflscape}	% landscape page and change the paper orientation 
+
+%% Line numbering for easier draft checking
+%\usepackage{lineno}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %TODO Particulars about your thesis HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,21 +57,8 @@
 \author{Budin Bin Buyung}
 % Your Matric Number
 \matric{161150042}
-% Your IC/Passport Number
-\icpass{201020-89-0089}
-% Your Date of Birth
-\dob{20 October 2000}
 % Your Enrolled School
 \schoolname{School of Mechatronic Engineering}
-% Your Enrolled Program
-%\programname{Biomedical Electronic Engineering}
-%% Your Supervisor name
-%\supervisor{Dr. Mohd Hanafi Mat Som}
-%% Panel 1
-%\panelone{Dr. Charles Xavier}
-%% Panel 2
-%\paneltwo{Dr. Muhammad Juhairi Aziz Safar}
-%\paneltwo{Dr. Putri Intan Payung Indah Zulaikha Odelia Ladasyia Absyari}
 % English title of your thesis
 \title{Writing Your Thesis with LaTeX and It's A Very Long Title That It Span to Three Lines Where the Longer the Title Makes Your Thesis Looks Awesome}
 % Malay title of your thesis
@@ -67,8 +67,6 @@
 \acads{2019/2020}
 % Year submitted
 \submityear{2020}
-% Declaration date signed
-\declaredate{10 January 2020}
 %% Degree name :-)
 \degreetype{Bachelor of Engineering (Biomedical Electronic Engineering)} 
 
@@ -96,17 +94,15 @@
 %
 
 \begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Number each lines for checking the draft of the thesis
+%% Must enable \usepackage{lineno}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\linenumbers
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Default bibliography style is apa (using 
-% \RequirePackage[natbibapa]{apacite} in the class file).
-%
-% If you prefer the number system though, use bibliography
-% style "plainnat" for [1][2][3] or "alpha" for [Jon94] (the label
-% will be auto-generated).
+% Default bibliography style is apa (using IEEE style)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\bibliographystyle{apacite}
-%\bibliographystyleown{apacite}	% comment this if not using \newcites{own} above
 %\bibliographystyle{plainnat}
 %\bibliographystyleown{plainnat}
 \bibliographystyle{IEEEtranN}
@@ -122,8 +118,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO Declaration & Panel Approval
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\declaration
-\approval 
+\declaration	%Frontmatter/Declaration-Report.pdf
+\approval 		%Frontmatter/Panel-Approval.pdf
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MAKE SURE YOU HAVE A acknowledgements.tex FILE
@@ -177,12 +173,9 @@
 % You can create mybib.bib with JabRef, the program included
 % download from
 % http://jabref.sourceforge.net/
-% \shortcite for APA style https://latex.org/forum/viewtopic.php?f=50&t=22088
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titlespacing*{\chapter}{0pt}{*-4.5}{\baselineskip}
-\bibliography{IEEEabrv,mybib}
-%\printbibliography
-	
+\bibliography{IEEEabrv,mybib}	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %TODO Appendices.

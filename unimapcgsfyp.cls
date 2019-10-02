@@ -18,12 +18,16 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{unimapcgsfyp}[2019/09/05 version 2.2]
+\ProvidesClass{unimapcgsfyp}[2019/10/02 version 2.3]
 
 %% Version 1.1 [2019/01/26] add tabulary, booktabs, multirow package
-%% Version 2.0 [2019/9/5] rename class from unimapcgs to unimapcgsfyp
-%% Version 2.1 [2019/9/5] use natbib
-%% Version 2.2 [2019/9/5] use numbered natbib with IEEEtranN
+%% Version 2.0 [2019/09/05] rename class from unimapcgs to unimapcgsfyp
+%% Version 2.1 [2019/09/05] use natbib
+%% Version 2.2 [2019/09/05] use numbered natbib with IEEEtranN
+%% Version 2.3 [2019/10/02] use sort&compress option for natbib
+							% redefine table font size to \small (11pt)
+							% caption options redefined according to ms word template
+							% option [fleqn] of the amsmath -- flush left equation
 
 \RequirePackage{silence}
 \WarningFilter{float}{Can't redefine}
@@ -99,7 +103,6 @@
 \ifpdf\pdfcompresslevel=9\else\fi
 
 \RequirePackage[listofformat=parens]{subfig}
-%\RequirePackage{subfigure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % When "bahasa" is specified last, all the sectioning 
@@ -129,7 +132,9 @@
 % These packages will help you in typesetting 
 % mathematical symbols, formulae and equations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\RequirePackage{amsmath,amssymb,textcomp}
+\RequirePackage[fleqn]{amsmath}
+\RequirePackage{amssymb,textcomp}
+%\numberwithin{equation}{section}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -235,7 +240,7 @@
 \renewcommand\cftchapdotsep{\cftnodots}
 \renewcommand\cftchapleader{\normalfont\cftdotfill{\cftchapdotsep}}
 \renewcommand\cftchappresnum{\MakeUppercase{\chaptername} }
-\renewcommand\cftchapaftersnum{\;: \; }
+\renewcommand\cftchapaftersnum{\; \; }
 \newlength\tmplength
 
 \renewcommand\cftfigpresnum{Figure }
@@ -334,46 +339,41 @@
 %TODO Table-related packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{tabularx,dcolumn, tabulary, booktabs, multirow}
-\RequirePackage[labelfont=bf]{caption} % make caption in bold for table and figure
+\RequirePackage[font=normalsize, labelsep=quad, format=hang, justification=centering]{caption}
+%\RequirePackage[labelfont=bf]{caption} % make caption in bold for table and figure
+
+\let\oldtabular\tabular
+\renewcommand{\tabular}{\small\oldtabular}
+
+\let\oldtabulary\tabulary
+\renewcommand{\tabulary}{\small\oldtabulary}
+
+\AtBeginEnvironment{longtable}{\small}{}{}
+\AtBeginEnvironment{sidewaystable}{\small}{}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %TODO Citation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\RequirePackage[natbibapa]{apacite}
-\RequirePackage[numbers,compress]{natbib}
+\RequirePackage[numbers,sort&compress]{natbib}
 %\RequirePackage[backend=biber,style=ieee,natbib=true]{biblatex}
 %\RequirePackage{IEEEtran}
 \addto\captionsenglish{%
 \renewcommand{\bibname}{REFERENCES}
 }
-\setlength\bibsep{0.5em}
+\setlength\bibsep{0.5em}	%vertical spacing
 
-%\setlength\bibhang{1.5em} % not worked with the "number" option
-
-%\setlength{\bibhang}{2.0em}
-%\def\setbibindent{
-%	\setlength{\itemindent}{-\bibhang}
-%	\setlength{\itemsep}{11pt}
-%	\setlength{\parsep}{11pt}
-%	\setlength{\leftmargin}{\bibhang}
-%}
-%\let\urbibitem=\bibitem
-%\def\bibitem{\setbibindent\urbibitem}
-
-% USE with natbib apacite
-%\setlength\bibindent{1.5em}
-%\renewcommand\NAT@bibsetnum[1]{\settowidth\labelwidth{\@biblabel{#1}}%
-%	\setlength{\leftmargin}{\bibindent}\addtolength{\leftmargin}{\dimexpr\labelwidth+\labelsep\relax}%
-%	\setlength{\itemindent}{-\bibindent}%new command
-%	\setlength{\listparindent}{\itemindent}%new command
-%	\setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
-%	\ifNAT@openbib
-%	\addtolength{\leftmargin}{\bibindent}%
-%	\setlength{\itemindent}{-\bibindent}%
-%	\setlength{\listparindent}{\itemindent}%
-%	\setlength{\parsep}{0pt}%
-%	\fi
-%}
+\setlength{\bibhang}{3em}
+\def\setbibindent{
+	\setlength{\itemsep}{11pt}	%vertical spacing
+	\setlength{\parsep}{11pt}	%vertical spacing
+	\setlength{\itemindent}{0pt}	%horizontal spacing
+	\setlength{\labelsep}{1em}
+	\setlength{\leftmargin}{\bibhang}
+	\setlength{\labelwidth}{\bibhang}
+}
+\let\urbibitem=\bibitem
+\def\bibitem{\setbibindent\urbibitem}
 
 \renewcommand\bibfont{\singlespace}
 

@@ -1,15 +1,15 @@
 %\addtocontents{toc}{\protect\pagebreak}
-\chapter{Figures, Tables, Equations, Algorithms, etc}\label{chap:design}
+\chapter{Methodology}\label{chap:methodology}
 
-%Your chapter.  I probably should include some examples on inserting figures, tables, mathematical equations, etc.
+\section{Figures, Tables, Equations, Algorithms, etc}
 
-(This is supposed to be the design or methodology chapter.  Instead, we include examples on inserting figures, tables, mathematical equations\ldots i.e.\ things that you might want to include in your thesis.)
+This is supposed to be the design or methodology chapter.  Instead, we include examples on inserting figures, tables, mathematical equations\ldots i.e.\ things that you might want to include in your thesis.
 
 \section{Inserting Figures}\label{sec:figure}
 
 You can draw diagrams with special \LaTeX\ commands, but this may take some extra time to learn.  I've had some forays into the \texttt{pgf} and \texttt{tikz} packages and must say I quite like the results; but as I said, they take time to learn. If you want a faster solution, you can draw your diagrams using other applications, and saving them as graphic files (EPS, PNG, JPG, PDF).  
 
-\LaTeX{} requires EPS (encapsulated postscript) graphic files when generating DVI output, and PNG, JPG or PDF when generating PDF output.
+\LaTeX{} requires EPS (encapsulated postscript) graphic files when generating DVI output, and \textbf{PNG, JPG or PDF} when generating \textbf{PDF output}.
 
 For exporting to EPS, try \url{http://www.cloudconvert.com}. It's like a Swiss knife for converting from almost any format, to almost any format.
 
@@ -19,6 +19,9 @@ Here's how to insert a picture with the filename \verb|pythag.eps| or \verb|pyth
 \begin{lstlisting}
 \begin{figure}[hbt!]\centering
 \includegraphics[width=50mm]{pythag}
+%\includegraphics[width=.4\textwidth]{pythag}
+%\includegraphics[keepaspectratio=true, width=.4\textwidth, height=10cm]{pythag}
+%\includegraphics[scale=0.7]{pythag}
 \caption{Pythagoras' Theorem}
 \label{fig:pythagoras}
 \end{figure}
@@ -30,12 +33,15 @@ The result would be:
 
 \begin{figure}[hbt!]\centering
 \includegraphics[width=50mm]{pythag}
+%\includegraphics[width=.4\textwidth]{pythag}
+%\includegraphics[keepaspectratio=true, width=.4\textwidth, height=10cm]{pythag}
+%\includegraphics[scale=0.7]{pythag}
 \caption{Pythagoras' Theroem} \label{fig:pythagoras}
 \end{figure}
 
 Don't specify the extension of the graphic file.  The template will automatically look for the EPS or the PNG (or otherwise) versions, depending on whether \verb|latex| or \verb|pdflatex| was used.  The \texttt{figure} environment will also ensure that that an entry is inserted into the \emph{List of Figures} automatically -- including the figure numbering, caption and page number.
 
-In addition, the width of the included graphics can also be specified as a percentage of the text width, e.g.~ \verb|width=.2\textwidth| would cause the graphics to occupy 20\% of the text width.
+In addition, the width of the included graphics can also be specified as a percentage of the text width, e.g.~ \verb|width=.4\textwidth| would cause the graphics to occupy 40\% of the text width. You can also use \verb|scale=0.7| to scale the figure to 70\% of the original size. If you specify the width and height, you might want to keep the aspect ratio of the image by using \verb|keepaspectratio=true|. 
 
 Notice that I inserted a \verb|\label| just after the \verb|\caption|.  This can be used for referencing the figure number, like this: \\
 \verb|Figure \ref{fig:pythagoras}| $\to$ Figure \ref{fig:pythagoras}
@@ -46,6 +52,8 @@ This works the same for chapters, sections, tables, equations too.  In \verb|cha
 
 Everytime the numbering of the heading changes, the reference will change automatically as well.  \textbf{This is another advantage of using \LaTeX{}}: you do not need to manually update the reference counters (nor the Table of Contents, List of Figures and Tables) whenever you add or remove figures, tables, sections or chapters.
 
+\noindent Please read more about how to handle figure here \url{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}.
+
 You might also want to try out \texttt{Inkscape} or \texttt{FlowframTk}. Both program are a vector graphics and drawing application, and can export to \LaTeX{} code which you can paste into your \LaTeX{} source. \texttt{Inkscape} and \texttt{FlowframTk} are available from \url{https://inkscape.org/} and \url{https://www.dickimaw-books.com/software/flowframtk/}.
 
 \section{How Do I Do Subfigures?}
@@ -54,13 +62,14 @@ Here's an example on how to do subfigures (and similarly subtables):
 \begin{figure}[hbt!]
 \begin{lstlisting}
 \begin{figure}[hbt!]
-  \begin{minipage}{.49\textwidth}
+  \begin{minipage}{.39\textwidth}
   \centering
   \subfloat[First caption]{\includegraphics[width=3cm]{pythag}} \label{fig:sub1}
   \end{minipage}
   \hfill
-  \begin{minipage}{.49\textwidth}
-  \subfloat[Second caption]{\includegraphics[width=0.8\textwidth]{USMScience}}\label{fig:sub2}
+  \begin{minipage}{.59\textwidth}	
+  \vspace{6.5ex}
+  \subfloat[Second caption]{\includegraphics[scale=0.35]{mechatronic}}\label{fig:sub2}
   \end{minipage}
   
   \caption{This is the main caption of the figure.}
@@ -71,75 +80,68 @@ Here's an example on how to do subfigures (and similarly subtables):
 \end{figure}
 
 \begin{figure}[hbt!]
-  \begin{minipage}{.49\textwidth}
+  \begin{minipage}{.39\textwidth}
   \centering
   \subfloat[First caption]{\includegraphics[width=3cm]{pythag}} \label{fig:sub1}
   \end{minipage}
   \hfill
-  \begin{minipage}{.49\textwidth}
-  \subfloat[Second caption]{\includegraphics[width=0.8\textwidth]{USMScience}}\label{fig:sub2}
+  \begin{minipage}{.59\textwidth}	
+  \vspace{6.5ex}
+  \subfloat[Second caption]{\includegraphics[scale=0.35]{mechatronic}}\label{fig:sub2}
   \end{minipage}
   
-  \caption{This is the main caption of the figure.}
+  \caption{This is the main caption of the figure. The caption of this figure is long enough to take up two lines.}
   \label{fig:main}
+\end{figure}
+
+Note that I added vertical space on the second figure using \verb|\vspace| to force the caption on the same level with the first figure. 
+
+Another examples of subfigure is given in Figure~\ref{fig:subfigureexample}.
+
+\begin{figure}[H]\singlespacing
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\vspace{7.4pc}
+		\subfloat[This is a plot of \emph{Absolute Salinity} across a section of the ocean, x-axis is latitude,  y-axis is depth]
+		{\includegraphics[scale=0.17]{EastSection_AbSal}\label{sectionAbSal}}				
+	\end{minipage}	
+%	\hfill
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\subfloat[This is a plot of \emph{Absolute Salinity} across the surface of the ocean around Tasmania in summer 2007, x-axis is longitude,  y-axis is latitude]
+		{\includegraphics[scale=0.2]{50pinIsosurface}\label{surfaceAbSal}}		
+	\end{minipage}		
+	\begin{minipage}{\textwidth}
+		\centering
+		\subfloat[This is a plot of \emph{dissolved aluminium} across the same section of the ocean as \ref{sectionAbSal}, x-axis is latitude,  y-axis is depth]
+		{\includegraphics[height=0.2\textheight,width=0.48\textwidth]{EastSection_dAl}\label{sectionDAl}}
+	\end{minipage}
+	\caption{This is how you do subfigures}
+	\label{fig:subfigureexample}
 \end{figure}
 
 \section{Inserting Tables}
 
-Typesetting tables can be a little troublesome especially with complex layouts.  Look up \citet{roberts} to learn about some tips, or you can use the online \LaTeX{} table generator (\url{https://www.tablesgenerator.com/}) to help you.
+Typesetting tables can be a little troublesome especially with complex layouts.  Look up \citet{roberts} to learn about some tips, or the wikibook for table \url{https://en.wikibooks.org/wiki/LaTeX/Tables}, or you can use the online \LaTeX{} table generator (\url{https://www.tablesgenerator.com/}) to help you.
 
-When you're done designing the table, copy the whole table as \LaTeX\ code, and paste it in your source file.  (You may add additional formatting commands, like bold, italics, etc.)  If this is going to be a numbered table, remember to surround it with \verb|\begin{table}| and \verb|\end{table}|, and give it a caption, like this:
+When you're done designing the table, copy the whole table as \LaTeX\ code, and paste it in your source file.  (You may add additional formatting commands, like bold, italics, etc.)  If this is going to be a numbered table, remember to surround it with \verb|\begin{table}| and \verb|\end{table}|, and give it a caption. 
 
-\begin{figure}[hbt!]
-\begin{lstlisting}
-\begin{table}[hbt!]\centering
-\begin{tabular}{| l | c || r |}
-\hline
-\textbf{Name} & \textbf{Category} & \textbf{Quantity} \\ 
-\hline\hline
-Apple & Fruit & 10 \\ 
-\hline
-Cucumber & Vegetable & 25 \\ 
-\hline
-Daisy & Flower & 5 \\ 
-\hline
-\end{tabular}
-\caption{Sample Table Only} \label{table:sample}
-\end{table}
-\end{lstlisting}
-\caption{Typesetting Tables}\label{fig:lst:table}
-\end{figure}
-
-\begin{table}[hbt!]\centering
-\begin{tabular}{| l | c || r |}
-\hline
-\textbf{Name} & \textbf{Category} & \textbf{Quantity} \\ 
-\hline\hline
-Apple & Fruit & 10 \\ 
-\hline
-Cucumber & Vegetable & 25 \\ 
-\hline
-Daisy & Flower & 5 \\ 
-\hline
-\end{tabular}
-\caption{Sample Table Only} \label{table:sample}
-\end{table}
-
-Note also that \verb|unimapcgsfyp| is configured such that captions for figures are placed \emph{below} the figures, and captions for tables are placed \emph{above} them, in accordance with the formatting guidelines.
+Note also that \verb|fypcgsthesis.cls| is configured such that captions for figures are placed \emph{below} the figures, and captions for tables are placed \emph{above} them, in accordance with the formatting guidelines.
 
 Many of us would have had massive headaches about lining up decimal places in table columns if not for this tip from \citet[pp.~274--276]{latex:companion}. This method uses the \verb|dcolumn| package (already loaded by \verb|unimapcgsfyp.cls|). Instead of using \verb|L,C| or \verb|R| as the column type in the \verb|tabulary| declaration, use\\ \texttt{D\{\textit{input sep}\}\{\textit{output sep}\}\{\textit{decimal places}\}}. Note that in Table~\ref{tab:align:decimal}, I use \verb|tabulary| instead of \verb|tabular|. The \verb|tabulary| package is awesome. The column width is set automatically so that it will wrap long sentences into a few lines as demonstrated in Table~\ref{tab:tabletabulary}. 
 
 \begin{figure}[htb!]
 \begin{lstlisting}
 \begin{table}[htb!]\centering
-\begin{tabulary}{\textwidth}{| C | D{.}{.}{3} |}
-\hline
-Item & \multicolumn{1}{c|}{Reading}\\\hline
-A & 1.11\\\hline
-B & 3.99\\\hline
-C & 2.27\\\hline
+\begin{tabulary}{\textwidth}{ C  D{.}{.}{3} }
+\toprule[1.2pt]
+Item & \multicolumn{1}{c}{Reading}\\ \midrule[1.2pt]
+A & 1.11\\
+B & 3.999\\
+C & 22.2\\ 
+\bottomrule[1.2pt]
 \end{tabulary}
-\caption{A table with decimal data}
+\caption{A table with decimal data}\label{tab:align:decimal}
 \end{table}
 \end{lstlisting}
 \caption{Aligning decimal data in tables}\label{fig:align:decimal}
@@ -147,32 +149,37 @@ C & 2.27\\\hline
 
 The \LaTeX\ code in Figure~\ref{fig:align:decimal} will give you Table~\ref{tab:align:decimal}.
 
+%TODO aligned decimal table
 \begin{table}[htb!]\centering
-\begin{tabulary}{\textwidth}{| C | D{.}{.}{3} |}
-\hline
-Item & \multicolumn{1}{c|}{Reading}\\\hline
-A & 1.11\\\hline
-B & 3.999\\\hline
-C & 22.2\\\hline
+\begin{tabulary}{\textwidth}{ C  D{.}{.}{3} }
+\toprule[1.2pt]
+Item & \multicolumn{1}{c}{Reading}\\ \midrule[1.2pt]
+A & 1.11\\
+B & 3.999\\
+C & 22.2\\ 
+\bottomrule[1.2pt]
 \end{tabulary}
 \caption{A table with decimal data}\label{tab:align:decimal}
 \end{table}
 
 Without using \verb|dcolumn|, you'd get something like this:
 
+%TODO misaligned table
 \begin{table}[htb!]\centering
-\begin{tabulary}{\textwidth}{| C | R |}
-\hline
-Item & \multicolumn{1}{c|}{Reading}\\\hline
-A & 1.11\\\hline
-B & 3.999\\\hline
-C & 22.2\\\hline
+\begin{tabulary}{\textwidth}{ C  R }
+\toprule[1.2pt]
+Item & \multicolumn{1}{c}{Reading}\\ \midrule[1.2pt]
+A & 1.11\\
+B & 3.999\\
+C & 22.2\\
+\bottomrule[1.2pt]
 \end{tabulary}
 \caption{A table with decimal data (mis-aligned)}
 \end{table}
 
+%TODO basic tabulary table
 \begin{table}[H]\singlespacing
-	\caption{This is an example to for a table. This is straightforward version.}	\label{tab:tabletabulary}
+	\caption{This is an example to for a table. This is straightforward version. The caption of this table is long that takes up to two lines.}	\label{tab:tabletabulary}
 	\begin{tabulary}{\textwidth}{L R C}
 		\toprule[1.5pt]
 		Short sentences & short one  & Long sentences \\ \midrule
@@ -198,6 +205,7 @@ In Table~\ref{tab:tabletabulary} and \ref{tab:tablemulticolumnrow}, I specify th
 	\caption{Note the differences between this table and previous tables.}
 \end{figure}
 
+%TODO multicolum and multirow table
 \begin{table}[H]\centering \singlespacing
 	\caption{This is another example for a table. Advance version of a table.}	\label{tab:tablemulticolumnrow}
 	\begin{tabulary}{0.8\textwidth}{|C|R|C|}
@@ -208,11 +216,12 @@ In Table~\ref{tab:tabletabulary} and \ref{tab:tablemulticolumnrow}, I specify th
 	\end{tabulary} 
 \end{table} 
 
-Table~\ref{tab:tablemulticolumnrow} set the table width so that it will occupy 80\% of the paper width. Then, I use \verb|multirow| package to span through 2 columns. This package also can be made to adjust the vertical alignment in a table whenever a row occupy more than a single line of sentence. \verb|multicolumn| not only use to merge two or more column, but can also be used to change a properties of a single row and column such as the text alignment and table border. 
+Table~\ref{tab:tablemulticolumnrow} set the table width so that it will occupy 80\% of the paper width. Then, I use \verb|multirow| package to span through 2 columns. This package also can be made to adjust the vertical alignment in a table whenever a row occupy more than a single line of sentence. Try to use either \verb|*| or \verb|=| with \verb|\multirow| width. \verb|multicolumn| not only use to merge two or more column, but can also be used to change a properties of a single row and column such as the text alignment and table border. 
 
+%TODO Specific size table
 \begin{table}[H]\centering\singlespacing
 	\caption{This is an example to for a table}	\label{tab:tablemulticolumn}
-	\begin{tabular}{|l|r|p{7cm}|}
+	\begin{tabular}{|l|r|m{7cm}|}
 		\hline
 		\multicolumn{2}{|c|}{\textbf{Merge 2 columns}} & \textbf{Long sentences} \\ \hline
 		\multirow{2}{*}[-4mm]{This is short.} & \multicolumn{1}{c|}{173} & This is much loooooooonger, because there are many more words.  \\ \cline{2-3}
@@ -220,7 +229,52 @@ Table~\ref{tab:tablemulticolumnrow} set the table width so that it will occupy 8
 	\end{tabular} 
 \end{table} 
 
-If you want to specify the exact size of each column, then make use of \verb|p{size}|, \verb|m{size}|, or \verb|b{size}|. \texttt{p} means normal cells, they are like parbox with alignment at the top line. \texttt{b} means alignment at the bottom, so the baseline is at the bottom line. \texttt{m} means alignment in the vertical center, i.e. the baseline is in the center. However, they not work very well with \verb|multitrow|. 
+If you want to specify the exact size of each column, then make use of \verb|p{size}|, \verb|m{size}|, or \verb|b{size}|. \texttt{p} means normal cells, they are like parbox with alignment at the top line. \texttt{b} means alignment at the bottom, so the baseline is at the bottom line. \texttt{m} means alignment in the vertical center, i.e. the baseline is in the center. However, they not work very well with \verb|multitrow|. Example of specific size table is given in the next example, Table~\ref{tab:longtable}. The table uses ratio of the textwidth, e.g. A4 paper width. 
+
+\section{Long Table Spanning More Than a Page}
+
+Samples of typesetting for longtable also can be found here at \href{https://texblog.org/2011/05/15/multi-page-tables-using-longtable/}{\texttt{https://textblog.org/\ldots longtable}}. For further information, you can refer to \href{https://download.nus.edu.sg/mirror/ctan/macros/latex/required/tools/longtable.pdf}{\texttt{longtable}} documentation.
+
+Table~\ref{tab:longtable} give you the example of using longtable that spans through more than a page. 
+
+\begin{singlespace}
+\renewcommand{\arraystretch}{1.5}	% relax spacing between each rows
+\setcitestyle{authoryear,round}		% change the citation style for lit. review table.
+\begin{longtable}{m{.2\textwidth} m{.3\textwidth} m{.4\textwidth}}
+	\caption{This is an example of a long table \label{tab:longtable}}	\\[2pc]	%spacing from caption to header
+	\toprule[1.2pt]
+	\textbf{Author (Year)} & \textbf{Methodology} & \textbf{Important Findings} \\ 	
+	\midrule
+	\endfirsthead	%first page header
+	\toprule[1.2pt]
+	\textbf{Author (Year)} & \textbf{Methodology} & \textbf{Important Findings} \\ 	
+	\midrule
+	\endhead % header that appear on every subsequent page 	
+	\bottomrule \multicolumn{3}{r}{\textit{\footnotesize Continue to next page \ldots}} \\
+	\endfoot	% footer that appear on every page except last
+	\bottomrule[1.2pt]
+	\endlastfoot
+	\citet{latex:companion} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\[12pt]
+	\citet{othman2019effect} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{wanna2018fracture} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{matsom:template} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{othman2019effect} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{wanna2018fracture} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{latex:companion} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\[12pt]
+	\citet{othman2019effect} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{wanna2018fracture} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{matsom:template} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{othman2019effect} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{wanna2018fracture} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{latex:companion} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\[12pt]
+	\citet{othman2019effect} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{wanna2018fracture} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{matsom:template} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{othman2019effect} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\citet{wanna2018fracture} & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+\end{longtable}
+\end{singlespace}
+
 
 \section{Full-paged, Sideways Figures and Tables}
 
@@ -241,13 +295,14 @@ To make a figure appear on a landscape, full-page layout, put your \verb|\includ
 \caption{A full-page, sideways figure}\label{fig:sidewaysfig}
 \end{sidewaysfigure}
 
-The resultant figure (Figure~\ref{fig:sidewaysfig}) should appear on the next page.
+\noindent The resultant figure (Figure~\ref{fig:sidewaysfig}) should appear on the next page. 
 
+%TODO single plage sideways table
 \begingroup
-\setlength{\rotFPtop}{1pc} %
+\setlength{\rotFPtop}{3pc} %
 \begin{sidewaystable}
 	\singlespacing
-		\caption{This is an example to for a table. This is straightforward version.}	\label{tab:sidetabletabulary}
+		\caption{This is an example of a sidewaystable.}	\label{tab:sidetabletabulary}
 		\begin{tabulary}{\textwidth}{L R C}
 			\toprule[1.5pt]
 			Short sentences & short one  & Long sentences \\ \midrule
@@ -257,15 +312,52 @@ The resultant figure (Figure~\ref{fig:sidewaysfig}) should appear on the next pa
 \end{sidewaystable}
 \endgroup
 
-For a sideways table, use the \verb|sidewaystable| environment instead around your usual \verb|tabular| material. The default positioning of the figure/table is in the middle of a page. You can use \verb|\setlength{\rotFPtop}{1pc}| before the \verb|sidewaystable| environment to change the figure/table positioning. Please enclose the \verb|sidewaystable| environment inside \verb|begingroup| and \verb|endgroup| so that it won't affect the positioning of the figure/table of the whole document. Play around with the size, 1pc, 0pt etc. 
+%TODO Sideways table using landscape layout for longtable
+\begin{landscape}
+	\singlespacing
+	\renewcommand{\arraystretch}{1.2}	% relax spacing between each rows
+	\setcitestyle{authoryear,round}		% change the citation style for lit. review table.
+	\begin{longtable}{m{.2\textwidth} m{.3\textwidth} m{.3\textwidth} m{.6\textwidth}}
+		\caption{This is an example of a long table in landscape page using \texttt{pdflscape} package \label{tab:longtablelandscape}}	\\[2pc]	%spacing from caption to header
+		\toprule[1.2pt]
+		\textbf{Author (Year)} & \textbf{Title} & \textbf{Methodology} & \textbf{Important Findings} \\ 	
+		\midrule
+		\endfirsthead	%first page header
+		\toprule[1.2pt]
+		\textbf{Author (Year)} & \textbf{Title} & \textbf{Methodology} & \textbf{Important Findings} \\ 	
+		\midrule
+		\endhead % header that appear on every subsequent page 	
+		\bottomrule \multicolumn{4}{r}{\textit{\footnotesize Continue to next page \ldots}} \\
+		\endfoot	% footer that appear on every page except last
+		\bottomrule[1.2pt]
+		\endlastfoot
+		\citet{latex:companion} & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\[12pt]
+		\citet{othman2019effect}  & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{wanna2018fracture}  & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{matsom:template}  & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{othman2019effect}  & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{wanna2018fracture} & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{latex:companion}  & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\[12pt]
+		\citet{othman2019effect}  & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{wanna2018fracture} & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{matsom:template}  & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{othman2019effect} & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{othman2019effect}  & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+		\citet{wanna2018fracture} & The title of the paper & Explain the methodology used in the paper. & Explain important findings you found in the paper. \\
+	\end{longtable}
+\end{landscape}
+
+For a sideways table, use the \verb|sidewaystable| environment instead around your usual \verb|tabular| material. The default positioning of the figure/table is in the middle of a page. You can use \verb|\setlength{\rotFPtop}{3pc}| before the \verb|sidewaystable| environment to change the figure/table positioning. Please enclose the \verb|sidewaystable| environment inside \verb|begingroup| and \verb|endgroup| so that it won't affect the positioning of the figure/table of the whole document. Play around with the size, 1pc, 0pt etc. 
+
+However, for a table that spans to multiple pages (using \verb|longtable|), you \textbf{must} use \verb|lscape| or \verb|pdflscape| package. \verb|sidewaystable| didn't work with \verb|longtable|. Please refer to the \verb|.tex| file to see how it is written. \verb|pdflscape| package will rotate the landscape page for better readability. 
 
 \section{Mathematical Equations}
 
 %Oooh I love this one.  After all, maths is the reason why Donald Knuth created \TeX{}!  It would be quite impossible for me to list all the commands, so I'll just give some example here, and you're better off looking at the various online tutorials like \cite{roberts}.  And TeXnicCenter certainly makes things much easier.
 
-Typesetting mathematical material is one of, if not \emph{the}, strongest capabilities of \LaTeX.  After all, that was the Knuth's main motivation for creating \TeX{}.  As it is impossible to enumerate all possible mathematically-related commands and macros here, we will just give some examples.  The reader is directed to the many well-written online tutorials, such as \citet{roberts}, for more elaborate examples.  TeXnicCenter also provides many shortcut buttons for inserting mathematical symbols.
+Typesetting mathematical material is one of, if not \emph{the}, strongest capabilities of \LaTeX.  After all, that was the Knuth's main motivation for creating \TeX{}.  As it is impossible to enumerate all possible mathematically-related commands and macros here, I will just give some examples.  The reader is directed to the many well-written online tutorials, such as \href{https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics}{\texttt{https://en.wikibooks.org/..Mathematics}}, \citet{roberts}, for more elaborate \href{https://www.andy-roberts.net/writing/latex}{examples}.  You can also refer to documentation of \href{http://texdoc.net/texmf-dist/doc/latex/amsmath/amsldoc.pdf}{\texttt{amsmath}} package. 
 
-\begin{figure}[htb!]
+\begin{figure}[hb!]
 \begin{lstlisting}
 \begin{equation}\label{eq:pythagoras}
 z^2 = x^2 + y^2
@@ -291,22 +383,83 @@ series.
 \caption{Typesetting Mathematical Equations}\label{fig:lst:equation}
 \end{figure}
 
-\begin{equation}\label{eq:pythagoras}
-z^2 = x^2 + y^2
-\end{equation}
-\begin{equation}\label{eq:golden:ratio}
-\phi = \frac{1}{2} (1 + \sqrt{5})
-\end{equation}
-\begin{equation}\label{eq:golden:ratio:fibonacci}
-\phi = 1 + \sum ^ {\infty} _ {n=1}
-                \frac{ (-1) ^ {n+1} }{ F_n F_{n+1} }
+\begin{singlespace}
+	\begin{equation}\label{eq:pythagoras}
+	z^2 = x^2 + y^2
+	\end{equation}
+	\begin{equation}\label{eq:golden:ratio}
+	\phi = \frac{1}{2} (1 + \sqrt{5})
+	\end{equation}
+	\begin{equation}\label{eq:golden:ratio:fibonacci}
+	\phi = 1 + \sum ^ {\infty} _ {n=1}
+	\frac{ (-1) ^ {n+1} }{ F_n F_{n+1} }
+	\end{equation}	
+\end{singlespace}
+
+Equation~\ref{eq:pythagoras} is the Pythagoras Theorem. \eqref{eq:golden:ratio} gives the golden ratio $\phi$, and \eqref{eq:golden:ratio:fibonacci} relates it to the Fibonacci series. 
+
+The \LaTeX\ code to generate the above mathematics materials are shown in Figure~\ref{fig:lst:equation}.  As you can see, references to equations can be achieved with either \verb|\ref| or \verb|\eqref|. Note the difference of using \verb|\ref| and \verb|\eqref|. 
+
+You might want to try the online equation editor such as  \url{https://hostmath.com/}, \href{http://www.sciweavers.org/free-online-latex-equation-editor}{\texttt{http://www.sciweavers.org/..equation-editor}}, \url{https://www.mathcha.io/}, and \url{https://www.latex4technics.com/} to familiarize with the \LaTeX\ equation. 
+
+\subsection{Puting equations in the text~~}  This is how you do equations in a sentence using the Math environment:  $a=b+7c^2 - d_{testing} \times 15e^{2^{h}_i} \rightarrow 2f_{2\Delta}$.  
+
+However, this equation is cut by the end of the line on the page.  So to force and `end of line', I will put in a `newline' command ``\verb|\\|''.  
+
+This is how you do equations in a sentence using the Math environment: \\ $a=b+7c^2 - d_{testing} \times 15e^{2^{h}_i} \rightarrow 2f_{2\Delta}$ \\
+
+\subsection{Equation aligned at =}
+This is how you do it. Note the symbol \textbf{\&} just before \textbf{=} in the codes ie \textbf{\&=} using \verb|align| environment. The star version \verb|align*| suppresses numbering of the equation. You can also suppress the numbering while using the standard \verb|align| with \verb|\nonumber| as shown in Equation~\eqref{eq:alignnonumber}.  
+
+For more explanation, refer to \href{https://www.sharelatex.com/learn/Aligning_equations_with_amsmath}{\texttt{https://www.sharelatex.com/..amsmath}}
+
+\begin{align}
+A_d &= \frac{1}{2}
+\left[
+\frac{R_2}{R_1}
+\left(\frac
+{1+\dfrac{R_4}{R_3}}
+{1+\dfrac{R_2}{R_1}}
+\right)
++\frac{R_4}{R_3}
+\right] \nonumber \\ 	% suppress numbering using \nonumber
+A_{cm} &= 
+\left[
+\frac{R_2}{R_1}
+\left(\frac
+{1+\dfrac{R_4}{R_3}}
+{1+\dfrac{R_2}{R_1}}
+\right)
+-\frac{R_4}{R_3}
+\right] \label{eq:alignnonumber} % label the equation
+\end{align}
+
+\begin{equation}
+	f(x) = \left\{
+	\begin{array}{lr}
+	x^2 &: x < 0\\
+	x^3 &: x \ge 0
+	\end{array}
+	\right.
 \end{equation}
 
-Equation~\ref{eq:pythagoras} is the Pythagoras Theorem. \eqref{eq:golden:ratio} gives the golden ratio $\phi$, and \eqref{eq:golden:ratio:fibonacci} relates it to the Fibonacci series.
+\subsection{Normal text in math mode~~}  
+Simply use (see codes in .tex file) $\textrm{normal text}~in~math~mode$ \\or
 
-The \LaTeX\ code to generate the above mathematics materials are shown in Figure~\ref{fig:lst:equation}.  As you can see, references to equations can be achieved with either \verb|\ref| or \verb|\eqref|. 
+Simply use (see codes in .tex file) $\text{normal text in}~math~mode$. 
 
-You might want to try the online equation edit \url{https://www.mathcha.io/} or \url{https://www.latex4technics.com/} to familiarize with the \LaTeX\ equation. 
+\begin{equation}
+\rho + \delta - \frac{345^{x^2 } + \theta \times \Omega_{x-1}}{\textrm{rarely you may want (some written text} \times \pi + \chi)}
+\label{howtomakeanumberedequation2}
+\end{equation}
+
+\subsection{Bold Math and Vector}
+This is how you bold math $\boldsymbol{y}=mx+c$. This is another example of using bold math and vector. 
+\begin{center}
+	$\boldsymbol{\Phi_E}=\int _{ S }\textbf{E}.d\vec{A} $
+\end{center} 
+
+This is another example of using vector $\overrightarrow{AB} = 0_E$
 
 \section{Acronyms}
 \acresetall
